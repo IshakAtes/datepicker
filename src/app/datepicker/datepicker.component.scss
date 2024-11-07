@@ -7,15 +7,46 @@ section {
     align-items: center;
 }
 
-// ::ng-deep .mat-calendar-body-cell.booked {
-//     background-color: red !important;
-//   }
-  
-//   ::ng-deep .mat-calendar-body-cell.available {
-//     background-color: yellow !important;
-//   }
+.calendar-container {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 
-button.example-custom-date-class {
-    background: orange;
-    border-radius: 100%;
+    h2 {
+        margin-bottom: 1rem;
+        color: #333;
+    }
+
+    .info-text {
+        margin-top: 1rem;
+        color: #666;
+        font-size: 0.9rem;
+    }
+}
+
+.button-container {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+
+    button {
+        flex: 1;
+    }
+}
+
+::ng-deep .user-vacation-day {
+  .mat-calendar-body-cell-content {
+    background-color: #4CAF50 !important;
+    border-radius: 50%;
+    color: white;
+    
+    &:hover {
+      background-color: #45a049 !important;
+    }
   }
+}
+
+::ng-deep .mat-calendar-body-today:not(.mat-calendar-body-selected) {
+  border-color: #4CAF50;
+}
